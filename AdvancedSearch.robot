@@ -3,10 +3,10 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}   firefox
-${SELSPEED}  0.0s
+${SELSPEED}  0.5s
 
 *** Test Cases ***
-Advanced Search
+Advanced Search - Site https://link.springer.com
     [Setup]  Run Keywords  Open Browser  https://www.google.com/  ${BROWSER}
     ...              AND   Set Selenium Speed  ${SELSPEED}
     click    id=search-options
@@ -15,7 +15,7 @@ Advanced Search
     type    name=facet-start-year    2010
     type    name=facet-end-year    2020
     click    id=submit-advanced-search
-    verifyTextPresent
+    verifyTextPresent Result(s) for 'Software Testing' within 2010 - 2020
     [Teardown]  Close Browser
 
 *** Keywords ***
