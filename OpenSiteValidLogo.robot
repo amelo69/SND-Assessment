@@ -3,10 +3,10 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}   firefox
-${SELSPEED}  0.0s
+${SELSPEED}  0.5s
 
 *** Test Cases ***
-Open Site Valid Logo
+Open Site Valid Logo - Site https://link.springer.com/ - The purpose of this test is to check that the correct site is open.
     [Setup]  Run Keywords  Open Browser  https://link.springer.com/  ${BROWSER}
     ...              AND   Set Selenium Speed  ${SELSPEED}
     # open    https://link.springer.com/
