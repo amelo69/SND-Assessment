@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Search Function2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Open Site Valid Logo</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://link.springer.com/<datalist><option>https://link.springer.com/</option><option>id=query</option><option>name=query</option><option>//input[@id='query']</option><option>//form[@id='global-search']/div/input</option><option>//input</option><option>css=#query</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyElementPresent</td><td>//img[@alt='Logo SpringerLink']<datalist><option>//img[@alt='Logo SpringerLink']</option><option>//a[@id='logo']/img</option><option>//a/img</option><option>css=img[alt="Logo SpringerLink"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyElementPresent</td><td>id=query<datalist><option>id=query</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Simple Search</td></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>id=query<datalist><option>id=query</option><option>name=query</option><option>//input[@id='query']</option><option>//form[@id='global-search']/div/input</option><option>//input</option><option>css=#query</option></datalist></td><td>Software Testing</td>
+</tr>
+<tr><td>click</td><td>id=search<datalist><option>id=search</option><option>//input[@id='search']</option><option>//form[@id='global-search']/input</option><option>//form/input</option><option>css=#search</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyTextPresent</td><td><datalist><option></option></datalist></td><td>Result(s) for 'Software Testing'</td>
+</tr>
+<tr><td>verifyTextPresent</td><td>Content Type<datalist><option>//div[@id='content-type-facet']/div/h3</option><option>//h3</option><option>css=h3</option><option>Content Type</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//img[@alt='Logo SpringerLink']<datalist><option>//img[@alt='Logo SpringerLink']</option><option>//a[@id='logo']/img</option><option>//a/img</option><option>css=img[alt="Logo SpringerLink"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyTextPresent</td><td>Providing researchers with access to millions of scientific documents<datalist><option>//div[@id='intro']/h2</option><option>//h2</option><option>css=h2</option><option>Providing researchers</option><option>Providing researchers with access to millions of scientific documents</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Advanced Search</td></tr>
+</thead>
+<tbody>
+<tr><td>click</td><td>id=search-options<datalist><option>id=search-options</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=advanced-search-link<datalist><option>Advanced Search</option><option>id=advanced-search-link</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=exact-phrase<datalist><option>id=exact phrase</option><option>id=exact-phrase</option></datalist></td><td>Software Testing</td>
+</tr>
+<tr><td>type</td><td>name=facet-start-year<datalist><option>name=facet-start-year</option></datalist></td><td>2010</td>
+</tr>
+<tr><td>type</td><td>name=facet-end-year<datalist><option>name=facet-end-year</option></datalist></td><td>2020</td>
+</tr>
+<tr><td>click</td><td>id=submit-advanced-search<datalist><option>id=submit-advanced-search</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyTextPresent</td><td><datalist><option></option></datalist></td><td>Result(s) for 'Software Testing' within 2010 - 2020</td>
+</tr>
+</tbody></table>
+</body>
+</html>
