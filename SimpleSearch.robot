@@ -3,10 +3,10 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}   firefox
-${SELSPEED}  0.0s
+${SELSPEED}  0.5s
 
 *** Test Cases ***
-Simple Search
+Simple Search - https://link.springer.com/  
     [Setup]  Run Keywords  Open Browser  https://www.google.com/  ${BROWSER}
     ...              AND   Set Selenium Speed  ${SELSPEED}
     type    id=query    Software Testing
